@@ -6,4 +6,4 @@
 
  Have fun
 
- ![Preview](BreakoutPreview.JPG)
+ ![Preview](BreakoutPreview.jpg)
