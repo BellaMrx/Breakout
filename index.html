@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="google" content="notranslate">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styleBreakout.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Breakout</title>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="headline">Breakout</h1>
+				<p class="infoKeys">Use arrow keys to play &#8592 &#8594 </p>
+			</div>
+			<div class="col-sm-12">
+				<div class="sound">
+					<img src="image/SOUND_ON.png" alt="" id="sound">
+				</div>
+    
+				<div id="gameover">
+					<img src="image/CupYouwon.png" alt="" id="youwon">
+					<img src="image/gameover.png" alt="" id="youlose">
+				<div id="restart">Play Again!</div>
+				</div>
+			</div>
+		</div>
+		<canvas id="breakout"></canvas>
+		<!-- #onScreenControllers buttons for mobile screens -->
+		<div id="onScreenControllers">
+			<button id="leftButton" onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">&#8592;</button>
+			<button id="rightButton" onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">&#8594;</button>
+		</div>
+    </div>
+    <script src="scriptBreakoutComponents.js"></script>
+    <script src="scriptBreakoutGame.js"></script>
+</body>
+</html>
