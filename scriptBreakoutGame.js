@@ -1,4 +1,3 @@
-// SELECT CANVAS ELEMENT
 const canvas = document.getElementById("breakout");
 const ctx = canvas.getContext("2d");
 
@@ -6,18 +5,18 @@ canvas.width = 400;
 canvas.height = 500;
 document.body.appendChild(canvas);
 
-// ADD BORDER TO CANVAS
+// add border to canvas
 canvas.style.border = "5px solid #000";
 
-// MAKE LINE THIK WHEN DRAWING TO CANVAS
+// make line thik when drawing to canvas
 ctx.lineWidth = 7;	
 
-// GAME VARIABLES AND CONSTANTS
+// game variables and constans
 const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
 const PADDLE_HEIGHT = 20;
 const BALL_RADIUS = 8;
-let LIFE = 5; // PLAYER HAS X LIVES
+let LIFE = 5; // player has x lives
 let SCORE = 0;
 const SCORE_UNIT = 10;
 let LEVEL = 1;
@@ -26,7 +25,7 @@ let GAME_OVER = false;
 let leftArrow = false;
 let rightArrow = false;
 
-// CREATE THE PADDLE
+// create paddle
 const paddle = {
     x : canvas.width/2 - PADDLE_WIDTH/2,
     y : canvas.height - PADDLE_MARGIN_BOTTOM - PADDLE_HEIGHT,
@@ -35,14 +34,14 @@ const paddle = {
     dx :5
 }
 
-// DRAW PADDLE
+// draw paddle
 function drawPaddle(){
     ctx.fillStyle = "#2e3548";
     ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
     
 }
 
-// CONTROL THE PADDLE
+// control paddle
 document.addEventListener("keydown", function(event){
    if(event.keyCode == 37){
        leftArrow = true;
@@ -58,7 +57,7 @@ document.addEventListener("keyup", function(event){
    }
 });
 
-// MOVE PADDLE
+// move paddle
 function movePaddle(){
     if(rightArrow && paddle.x + paddle.width < canvas.width){
         paddle.x += paddle.dx;
@@ -67,7 +66,7 @@ function movePaddle(){
     }
 }
 
-// CREATE THE BALL
+// create the ball
 const ball = {
     x : canvas.width/2,
     y : paddle.y - BALL_RADIUS,
@@ -77,7 +76,7 @@ const ball = {
     dy : -3
 }
 
-// DRAW THE BALL
+// draw the ball
 function drawBall(){
     ctx.beginPath();
     
@@ -91,13 +90,13 @@ function drawBall(){
     ctx.closePath();
 }
 
-// MOVE THE BALL
+// move the ball
 function moveBall(){
     ball.x += ball.dx;
     ball.y += ball.dy;
 }
 
-// BALL AND WALL COLLISION DETECTION
+// ball and wall collision detection
 function ballWallCollision(){
     if(ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0){
         ball.dx = - ball.dx;
@@ -110,13 +109,13 @@ function ballWallCollision(){
     }
     
     if(ball.y + ball.radius > canvas.height){
-        LIFE--; // LOSE LIFE
+        LIFE--; // lose life
         LIFE_LOST.play();
         resetBall();
     }
 }
 
-// RESET THE BALL
+// reset the ball
 function resetBall(){
     ball.x = canvas.width/2;
     ball.y = paddle.y - BALL_RADIUS;
@@ -124,20 +123,20 @@ function resetBall(){
     ball.dy = -3;
 }
 
-// BALL AND PADDLE COLLISION
+// ball and paddle collision
 function ballPaddleCollision(){
     if(ball.x < paddle.x + paddle.width && ball.x > paddle.x && paddle.y < paddle.y + paddle.height && ball.y > paddle.y){
         
-        // PLAY SOUND
+        // play sound
         PADDLE_HIT.play();
         
-        // CHECK WHERE THE BALL HIT THE PADDLE
+        // check where the ball hit the paddle
         let collidePoint = ball.x - (paddle.x + paddle.width/2);
         
-        // NORMALIZE THE VALUES
+        // normalize the values
         collidePoint = collidePoint / (paddle.width/2);
         
-        // CALCULATE THE ANGLE OF THE BALL
+        // calculate the angle of the ball
         let angle = collidePoint * Math.PI/3;
             
             
@@ -146,7 +145,7 @@ function ballPaddleCollision(){
     }
 }
 
-// CREATE THE BRICKS
+// create bricks
 const brick = {
     row : 1,
     column : 5,
@@ -222,7 +221,7 @@ function showGameStats(text, textX, textY, img, imgX, imgY){
     ctx.drawImage(img, imgX, imgY, width = 25, height = 25);
 }
 
-// DRAW FUNCTION
+// draw function
 function draw(){
     drawPaddle();
     
@@ -230,11 +229,11 @@ function draw(){
     
     drawBricks();
     
-    // SHOW SCORE
+    // display score
     showGameStats(SCORE, 35, 25, SCORE_IMG, 5, 5);
-    // SHOW LIVES
+    // display lives
     showGameStats(LIFE, canvas.width - 25, 25, LIFE_IMG, canvas.width-55, 5); 
-    // SHOW LEVEL
+    // display level
     showGameStats(LEVEL, canvas.width/2, 25, LEVEL_IMG, canvas.width/2 - 30, 5);
 }
 
@@ -273,7 +272,7 @@ function levelUp(){
     }
 }
 
-// UPDATE GAME FUNCTION
+// update game function
 function update(){
     movePaddle();
     
@@ -290,9 +289,9 @@ function update(){
     levelUp();
 }
 
-// GAME LOOP
+// game loop
 function loop(){
-    // CLEAR THE CANVAS
+    // clear the canvas
     ctx.drawImage(BG_IMG, 0, 0);
     
     draw();
@@ -306,19 +305,19 @@ function loop(){
 loop();
 
 
-// SELECT SOUND ELEMENT
+// select element sounds
 const soundElement  = document.getElementById("sound");
 
 soundElement.addEventListener("click", audioManager);
 
 function audioManager(){
-    // CHANGE IMAGE SOUND_ON/OFF
+    // change image sound_on/off
     let imgSrc = soundElement.getAttribute("src");
     let SOUND_IMG = imgSrc == "image/SOUND_ON.png" ? "image/SOUND_OFF.png" : "image/SOUND_ON.png";
     
     soundElement.setAttribute("src", SOUND_IMG);
     
-    // MUTE AND UNMUTE SOUNDS
+    // mute unmute sounds
     WALL_HIT.muted = WALL_HIT.muted ? false : true;
     PADDLE_HIT.muted = PADDLE_HIT.muted ? false : true;
     BRICK_HIT.muted = BRICK_HIT.muted ? false : true;
@@ -326,32 +325,31 @@ function audioManager(){
     LIFE_LOST.muted = LIFE_LOST.muted ? false : true;
 }
 
-// SHOW GAME OVER MESSAGE
-/* SELECT ELEMENTS */
+// show game over message
 const gameover = document.getElementById("gameover");
 const youwin = document.getElementById("youwin");
 const youlose = document.getElementById("youlose");
 const restart = document.getElementById("restart");
 
-// CLICK ON PLAY AGAIN BUTTON
+// click on play again button
 restart.addEventListener("click", function(){
     location.reload(); // reload the page
 })
 
-// SHOW YOU WIN
+// display win
 function showYouWin(){
     gameover.style.display = "block";
     youwon.style.display = "block";
 }
 
-// SHOW YOU LOSE
+// display lose
 function showYouLose(){
     gameover.style.display = "block";
     youlose.style.display = "block";
 }
 
 
-// buttons für Touchscreen
+// buttons touchscreen
 function moveleft() {
 	leftArrow = 1;
 }

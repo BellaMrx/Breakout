@@ -1,6 +1,5 @@
-/////// LOAD IMAGES ////////
 
-// LOAD BG IMAGE
+// load images
 const BG_IMG = new Image();
 BG_IMG.src = "image/background.png";
 
@@ -14,12 +13,7 @@ const SCORE_IMG = new Image();
 SCORE_IMG.src = "image/StarScore.png";
 
 
-/////// END LOAD IMAGES ////////
-
-// ************************ //
-
-/////// LOAD SOUNDS ////////
-
+// load sounds
 const WALL_HIT = new Audio();
 WALL_HIT.src = "sounds/wall.mp3";
 
@@ -34,6 +28,3 @@ WIN.src = "sounds/win.mp3";
 
 const BRICK_HIT = new Audio();
 BRICK_HIT.src = "sounds/brick_hit.mp3";
-
-
-/////// END LOAD SOUNDS ////////
