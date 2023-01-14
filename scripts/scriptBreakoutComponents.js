@@ -1,16 +1,16 @@
 
 // load images
 const BG_IMG = new Image();
-BG_IMG.src = "image/background.png";
+BG_IMG.src = "images/background.png";
 
 const LEVEL_IMG = new Image();
-LEVEL_IMG.src = "image/Level.png";
+LEVEL_IMG.src = "images/Level.png";
 
 const LIFE_IMG = new Image();
-LIFE_IMG.src = "image/HeartLife.png";
+LIFE_IMG.src = "images/HeartLife.png";
 
 const SCORE_IMG = new Image();
-SCORE_IMG.src = "image/StarScore.png";
+SCORE_IMG.src = "images/StarScore.png";
 
 
 // load sounds
