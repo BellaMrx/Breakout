@@ -6,4 +6,11 @@
 
  Have fun
 
- ![Preview](BreakoutPreview.jpg)
+ Preview
+
+![Preview](images/PreviewBreakout.PNG)
+
+
+ Mobile View
+
+![Preview](images/PreviewBreakoutMobileView.PNG)
