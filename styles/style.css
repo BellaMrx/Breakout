@@ -8,14 +8,13 @@ html {
 }
 
 body {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: table;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
 	text-align: center;
 	background-image: linear-gradient(#68c6cf, #f4b76c);
-
 }
 
 h1 {
@@ -27,8 +26,8 @@ h1 {
 .infoKeys {
 	font-size: 1.5rem;
 	position: absolute;
-	top : 530px;
-	left : 100px;
+	top: 530px;
+	left: 100px;
 }
 
 #sound {
@@ -36,13 +35,13 @@ h1 {
 	height : 30px;
 	cursor: pointer;
 	position: absolute;
-	top : 465px;
-	left : 15px;
+	top: 465px;
+	left: 15px;
 }
 
 #gameover {
 	position: absolute;
-	width : 380px;
+	width: 380px;
 	height: 480px;
 	top: 15px;
 	background: rgba(0,0,0,0.5);
@@ -52,8 +51,8 @@ h1 {
 #youwon {
 	width: 100px;
 	position: absolute;
-	top : 200px;
-	left : 140px;
+	top: 200px;
+	left: 140px;
 	display: none;
 }
 
@@ -68,10 +67,10 @@ h1 {
 #restart {
 	position: absolute;
 	top: 310px;
-	left : 140px;
+	left: 140px;
 	cursor: pointer;
 	font-size: 1.25em;
-	color : #fff;
+	color: #fff;
 }
 
 canvas {
@@ -79,16 +78,13 @@ canvas {
 	width: 100%;
 }
 
-
-
-
 .contact {
 	float: right;
 	position: absolute;
 	top: 180%;
 	right: 30%;
 	z-index: 1;
-    display: flex;
+	display: flex;
 }
 
 .link {
@@ -105,7 +101,7 @@ canvas {
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 	text-decoration: none;
 }
 
@@ -122,362 +118,354 @@ span {
 }
 
 
-
-
 @media only screen and (min-width: 1040px) {
 /* Buttons hide #onScreenControllers on desktop */
-#onScreenControllers {
-	display: none;
-}
+	#onScreenControllers {
+		display: none;
+	}
 }
 
 
 @media (min-width: 1015px) and (max-width: 1030px) {
-.infoKeys {
-	display: none;
-}
+	.infoKeys {
+		display: none;
+	}
 
-#onScreenControllers button {
-    background-color: transparent;
-	color: #fff;
-    height: 15vw;
-    width: 15vw;
-    font-size: 7.5vw;
-    border: 1vw solid #68c6cf;
-	border-radius: 5rem;
-}
+	#onScreenControllers button {
+		background-color: transparent;
+		color: #fff;
+		height: 15vw;
+		width: 15vw;
+		font-size: 7.5vw;
+		border: 1vw solid #68c6cf;
+		border-radius: 5rem;
+	}
 
-#leftButton {
-	position: absolute;
-	top : 70%;
-	left : 30px;
-}
+	#leftButton {
+		position: absolute;
+		top: 70%;
+		left: 30px;
+	}
 
-#rightButton {
-	position: absolute;
-	top : 70%;
-	right : 30px;
-}	
+	#rightButton {
+		position: absolute;
+		top: 70%;
+		right: 30px;
+	}	
 
-.contact {
-	float: right;
-	position: fixed;
-	top: 17%;
-	right: 45%;
-	z-index: 1;
-    display: flex;
-}
+	.contact {
+		float: right;
+		position: fixed;
+		top: 17%;
+		right: 45%;
+		z-index: 1;
+		display: flex;
+	}
 
-#link {
-	font-size: 4vw;
-	margin: 0 0 0 0.1px; 
-}
+	#link {
+		font-size: 4vw;
+		margin: 0 0 0 0.1px; 
+	}
 
-/* for Twitter, GitHub icon */
-.fa {
-	font-size: 4vw;
-	text-decoration: none;
-	margin: 0 0 0 20px;
-}
-
+	/* for Twitter, GitHub icon */
+	.fa {
+		font-size: 4vw;
+		text-decoration: none;
+		margin: 0 0 0 20px;
+	}
 }
 
 
 @media (min-width: 275px) and (max-width: 1014px) {
-.infoKeys {
-	display: none;
-}
+	.infoKeys {
+		display: none;
+	}
 
-#onScreenControllers button {
-    background-color: #90d5dc;
-	color: #fff;
-    height: 15vw;
-    width: 15vw;
-    font-size: 7.5vw;
-	border: 1vw solid #90d5dc;
-	border-radius: 5rem;
-	box-shadow: 0 0.563rem #579ea6;
-}
+	#onScreenControllers button {
+		background-color: #90d5dc;
+		color: #fff;
+		height: 15vw;
+		width: 15vw;
+		font-size: 7.5vw;
+		border: 1vw solid #90d5dc;
+		border-radius: 5rem;
+		box-shadow: 0 0.563rem #579ea6;
+	}
 
-#onScreenControllers button:hover {
-	background-color: #7cc8cf;
-	border: 1vw solid #7cc8cf;
-}
+	#onScreenControllers button:hover {
+		background-color: #7cc8cf;
+		border: 1vw solid #7cc8cf;
+	}
 
-#onScreenControllers button:active {
-	background-color: #6ac1cb;
-	border: 1vw solid #6ac1cb;
-	box-shadow: 0 0.4rem #2c949c;
-	transform: translateY(0.25rem);
-}
+	#onScreenControllers button:active {
+		background-color: #6ac1cb;
+		border: 1vw solid #6ac1cb;
+		box-shadow: 0 0.4rem #2c949c;
+		transform: translateY(0.25rem);
+	}
 
-#leftButton {
-	position: absolute;
-	top : 82%;
-	left : 50px;
-}
+	#leftButton {
+		position: absolute;
+		top: 82%;
+		left: 50px;
+	}
 
-#rightButton {
-	position: absolute;
-	top : 82%;
-	right : 50px;
-}
+	#rightButton {
+		position: absolute;
+		top: 82%;
+		right: 50px;
+	}
 
-.contact {
-	float: right;
-	position: fixed;
-	top: 15%;
-	right: 25%;
-	z-index: 1;
-    display: flex;
-}
+	.contact {
+		float: right;
+		position: fixed;
+		top: 15%;
+		right: 25%;
+		z-index: 1;
+		display: flex;
+	}
 
-#link {
-	font-size: 4vw;
-	margin: 0 0 0 0.1px; 
-}
+	#link {
+		font-size: 4vw;
+		margin: 0 0 0 0.1px; 
+	}
 
-/* for Twitter, GitHub icon */
-.fa {
-	font-size: 4vw;
-	text-decoration: none;
-	margin: 0 0 0 20px;
-}
-
+	/* for Twitter, GitHub icon */
+	.fa {
+		font-size: 4vw;
+		text-decoration: none;
+		margin: 0 0 0 20px;
+	}
 }
 
 
 @media (min-width: 275px) and (max-width: 290px) {
-#sound {
-	width: 25px;
-	height : 25px;
-	cursor: pointer;
-	position: absolute;
-	top : 310px;
-	left : 15px;
-}
+	#sound {
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		position: absolute;
+		top: 310px;
+		left: 15px;
+	}
 
-#gameover {
-	position: absolute;
-	width : 250px;
-	height: 315px;
-	top: 15px;
-	background: rgba(0,0,0,0.5);
-	display: none;
-}
+	#gameover {
+		position: absolute;
+		width: 250px;
+		height: 315px;
+		top: 15px;
+		background: rgba(0,0,0,0.5);
+		display: none;
+	}
 
-#youwon {
-	width: 50px;
-	position: absolute;
-	top : 100px;
-	left : 100px;
-	display: none;
-}
+	#youwon {
+		width: 50px;
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		display: none;
+	}
 
-#youlose {
-	width: 250px;
-	position: absolute;
-	top: 65px;
-	left: 0px;
-	display: none;
-}
+	#youlose {
+		width: 250px;
+		position: absolute;
+		top: 65px;
+		left: 0px;
+		display: none;
+	}
 
 #restart {
-	position: absolute;
-	top: 170px;
-	left : 75px;
-	cursor: pointer;
-	font-size: 1.25em;
-	color : #FFF;
-}
+		position: absolute;
+		top: 170px;
+		left: 75px;
+		cursor: pointer;
+		font-size: 1.25em;
+		color: #FFF;
+	}
 
-#link {
-	font-size: 4vw;
-	margin: 0 0 0 0.1px; 
-}
+	#link {
+		font-size: 4vw;
+		margin: 0 0 0 0.1px; 
+	}
 
-/* for Twitter, GitHub icon */
-.fa {
-	font-size: 4vw;
-	text-decoration: none;
-	margin: 0 0 0 20px;
-}
-
+		/* for Twitter, GitHub icon */
+	.fa {
+		font-size: 4vw;
+		text-decoration: none;
+		margin: 0 0 0 20px;
+	}
 }
 
 
 @media (min-width: 355px) and (max-width: 365px) {
-#sound {
-	width: 30px;
-	height : 30px;
-	cursor: pointer;
-	position: absolute;
-	top : 410px;
-	left : 15px;
-}
+	#sound {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		position: absolute;
+		top: 410px;
+		left: 15px;
+	}
 
-#gameover {
-	position: absolute;
-	width : 330px;
-	height: 415px;
-	top: 15px;
-	background: rgba(0,0,0,0.5);
-	display: none;
-}
+	#gameover {
+		position: absolute;
+		width: 330px;
+		height: 415px;
+		top: 15px;
+		background: rgba(0,0,0,0.5);
+		display: none;
+	}
 
-#youwon {
-	width: 100px;
-	position: absolute;
-	top : 130px;
-	left : 115px;
-	display: none;
-}
+	#youwon {
+		width: 100px;
+		position: absolute;
+		top: 130px;
+		left: 115px;
+		display: none;
+	}
 
-#youlose {
-	width: 350px;
-	position: absolute;
-	top: 70px;
-	left: -10px;
-	display: none;
-}
+	#youlose {
+		width: 350px;
+		position: absolute;
+		top: 70px;
+		left: -10px;
+		display: none;
+	}
 
-#restart {
-	position: absolute;
-	top: 250px;
-	left : 110px;
-	cursor: pointer;
-	font-size: 1.25em;
-	color : #FFF;
-}
+	#restart {
+		position: absolute;
+		top: 250px;
+		left: 110px;
+		cursor: pointer;
+		font-size: 1.25em;
+		color: #FFF;
+	}
 
-#link {
-	font-size: 4vw;
-	margin: 0 0 0 0.1px; 
-}
+	#link {
+		font-size: 4vw;
+		margin: 0 0 0 0.1px; 
+	}
 
-/* for Twitter, GitHub icon */
-.fa {
-	font-size: 4vw;
-	text-decoration: none;
-	margin: 0 0 0 20px;
-}
-
+	/* for Twitter, GitHub icon */
+	.fa {
+		font-size: 4vw;
+		text-decoration: none;
+		margin: 0 0 0 20px;
+	}
 }
 
 
 @media (min-width: 370px) and (max-width: 380px) {
-#sound {
-	width: 30px;
-	height : 30px;
-	cursor: pointer;
-	position: absolute;
-	top : 425px;
-	left : 15px;
-}
+	#sound {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		position: absolute;
+		top: 425px;
+		left: 15px;
+	}
 
-#gameover {
-	position: absolute;
-	width : 345px;
-	height: 435px;
-	top: 15px;
-	background: rgba(0,0,0,0.5);
-	display: none;
-}
+	#gameover {
+		position: absolute;
+		width: 345px;
+		height: 435px;
+		top: 15px;
+		background: rgba(0,0,0,0.5);
+		display: none;
+	}
 
-#youwon {
-	width: 100px;
-	position: absolute;
-	top : 130px;
-	left : 120px;
-	display: none;
-}
+	#youwon {
+		width: 100px;
+		position: absolute;
+		top: 130px;
+		left: 120px;
+		display: none;
+	}
 
-#youlose {
-	width: 350px;
-	position: absolute;
-	top: 75px;
-	left: 0px;
-	display: none;
-}
+	#youlose {
+		width: 350px;
+		position: absolute;
+		top: 75px;
+		left: 0px;
+		display: none;
+	}
 
-#restart {
-	position: absolute;
-	top: 250px;
-	left : 115px;
-	cursor: pointer;
-	font-size: 1.25em;
-	color : #FFF;
-}
+	#restart {
+		position: absolute;
+		top: 250px;
+		left: 115px;
+		cursor: pointer;
+		font-size: 1.25em;
+		color: #FFF;
+	}
 
-#link {
-	font-size: 4vw;
-	margin: 0 0 0 0.1px; 
-}
+	#link {
+		font-size: 4vw;
+		margin: 0 0 0 0.1px; 
+	}
 
-/* for Twitter, GitHub icon */
-.fa {
-	font-size: 4vw;
-	text-decoration: none;
-	margin: 0 0 0 20px;
-}
-
+	/* for Twitter, GitHub icon */
+	.fa {
+		font-size: 4vw;
+		text-decoration: none;
+		margin: 0 0 0 20px;
+	}
 }
 
 
 @media (min-width: 385px) and (max-width: 395px) {
-#sound {
-	width: 30px;
-	height : 30px;
-	cursor: pointer;
-	position: absolute;
-	top : 445px;
-	left : 15px;
-}
+	#sound {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		position: absolute;
+		top: 445px;
+		left: 15px;
+	}
 
-#gameover {
-	position: absolute;
-	width : 360px;
-	height: 460px;
-	top: 15px;
-	background: rgba(0,0,0,0.5);
-	display: none;
-}
+	#gameover {
+		position: absolute;
+		width: 360px;
+		height: 460px;
+		top: 15px;
+		background: rgba(0,0,0,0.5);
+		display: none;
+	}
 
-#youwon {
-	width: 100px;
-	position: absolute;
-	top : 160px;
-	left : 130px;
-	display: none;
-}
+	#youwon {
+		width: 100px;
+		position: absolute;
+		top: 160px;
+		left: 130px;
+		display: none;
+	}
 
-#youlose {
-	width: 400px;
-	position: absolute;
-	top: 80px;
-	left: -15px;
-	display: none;
-}
+	#youlose {
+		width: 400px;
+		position: absolute;
+		top: 80px;
+		left: -15px;
+		display: none;
+	}
 
-#restart {
-	position: absolute;
-	top: 275px;
-	left : 130px;
-	cursor: pointer;
-	font-size: 1.25em;
-	color : #FFF;
-}
+	#restart {
+		position: absolute;
+		top: 275px;
+		left: 130px;
+		cursor: pointer;
+		font-size: 1.25em;
+		color: #FFF;
+	}
 
-#link {
-	font-size: 4vw;
-	margin: 0 0 0 0.1px; 
-}
+	#link {
+		font-size: 4vw;
+		margin: 0 0 0 0.1px; 
+	}
 
-/* for Twitter, GitHub icon */
-.fa {
-	font-size: 4vw;
-	text-decoration: none;
-	margin: 0 0 0 20px;
-}
-
+	/* for Twitter, GitHub icon */
+	.fa {
+		font-size: 4vw;
+		text-decoration: none;
+		margin: 0 0 0 20px;
+	}
 }
