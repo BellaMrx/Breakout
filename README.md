@@ -1,12 +1,8 @@
 # Breakout
 
- Game only in HTML, CSS, JS
+- [LaunchFree.net](https://launchfree.net/sites/games/games.html) - Game only in HTML, CSS, JS
 
  Save the files in a folder and open the file "index.html" in your browser. 
-
- Have fun
-
- Video on [YouTube](https://www.youtube.com/watch?v=WrQiIzNJYPg)
 
  Preview
 
